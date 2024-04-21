@@ -1,0 +1,8 @@
+su: ignoring --preserve-environment, it's mutually exclusive with --login
+Warning in loadSupport(appDir, renv = sharedEnv, globalrenv = NULL) :
+  Loading R/ subdirectory for Shiny application, but this directory appears to contain an R package. Sourcing files in R/ may cause unexpected behavior.
+Error in setMethod("dbDataType", signature("PqConnection", "data.frame"),  : 
+  no existing definition for function ‘dbDataType’
+Calls: runApp ... FUN -> eval -> eval -> ..stacktraceon.. -> setMethod
+Execution halted
+

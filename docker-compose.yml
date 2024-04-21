@@ -15,6 +15,7 @@ services:
          - "./pgdata:/var/lib/postgresql/data"
    shiny: 
       container_name: shiny
+      platform: linux/amd64
       depends_on: 
          - postgres
       build: ./shiny
@@ -22,7 +23,7 @@ services:
          - "./shiny-logs:/var/log/shiny-server"
          - "./shiny-home:/srv/shiny-server"
       ports:
-         - "3838:3838"
+         - "3839:3838"
         
 
 

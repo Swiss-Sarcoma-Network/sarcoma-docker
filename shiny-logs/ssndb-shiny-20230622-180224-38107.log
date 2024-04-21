@@ -1,0 +1,26 @@
+su: ignoring --preserve-environment, it's mutually exclusive with --login
+Warning in loadSupport(appDir, renv = sharedEnv, globalrenv = NULL) :
+  Loading R/ subdirectory for Shiny application, but this directory appears to contain an R package. Sourcing files in R/ may cause unexpected behavior.
+ℹ Loading ssndb
+Warning: `nav()` was deprecated in {bslib} version 0.5.0, use `nav_panel()` instead.
+getting dm
+Warning: `nav()` was deprecated in {bslib} version 0.5.0, use `nav_panel()` instead.
+Warning: `nav()` was deprecated in {bslib} version 0.5.0, use `nav_panel()` instead.
+Warning: `nav()` was deprecated in {bslib} version 0.5.0, use `nav_panel()` instead.
+Warning: `nav()` was deprecated in {bslib} version 0.5.0, use `nav_panel()` instead.
+Warning: `nav()` was deprecated in {bslib} version 0.5.0, use `nav_panel()` instead.
+Warning: `nav()` was deprecated in {bslib} version 0.5.0, use `nav_panel()` instead.
+Warning: `nav()` was deprecated in {bslib} version 0.5.0, use `nav_panel()` instead.
+
+Listening on http://127.0.0.1:38107
+server
+server
+server
+server
+server
+server
+server
+dtedit call
+dtedit call
+Terminated
+
