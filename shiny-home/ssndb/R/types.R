@@ -16,23 +16,23 @@ NULL
 #' @aliases dbDataType,PqConnection,data.frame-method
 #' @rdname custom-dbDataType
 #' @export
-setMethod(
-  "dbDataType",
-  signature("PqConnection", "data.frame"),
-  function(dbObj, obj, ...) {
-    res <- Map(
-      function(x, i) {
-        DBI::dbDataType(dbObj, x, col = DBI::dbQuoteIdentifier(dbObj, i))
-      },
-      obj,
-      names(obj)
-    )
-    stopifnot(all(vapply(res, is_string, logical(1L))))
-    unlist(res)
-  }
-)
+#setMethod(
+#  "dbDataType",
+#  signature("PqConnection", "data.frame"),
+#  function(dbObj, obj, ...) {
+#    res <- Map(
+#      function(x, i) {
+#        DBI::dbDataType(dbObj, x, col = DBI::dbQuoteIdentifier(dbObj, i))
+#      },
+#      obj,
+#      names(obj)
+#    )
+#    stopifnot(all(vapply(res, is_string, logical(1L))))
+#    unlist(res)
+#  }
+#)
 
-setOldClass("blob")
+#setOldClass("blob")
 
 #' Constructor for custom data types
 #'
