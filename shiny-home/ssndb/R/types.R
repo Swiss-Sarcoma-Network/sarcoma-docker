@@ -51,8 +51,8 @@ blob <- function() {
 #' @aliases dbDataType,PqConnection,blob-method
 #' @rdname custom-dbDataType
 #' @export
-setMethod(
-  "dbDataType",
-  signature("PqConnection", "blob"),
-  function(dbObj, obj, ...) "bytea"
-)
+#setMethod(
+#  "dbDataType",
+#  signature("PqConnection", "blob"),
+#  function(dbObj, obj, ...) "bytea"
+#)
