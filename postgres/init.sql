@@ -10,10 +10,8 @@ INSERT INTO demo.demo VALUES (1, 'Bugs Bunny');
 INSERT INTO demo.demo VALUES (2, 'Duffy Duck');
 INSERT INTO demo.demo VALUES (3, 'Mighty Mouse');
 
-CREATE SCHEMA IF NOT EXISTS "ssndb";
-
 -- CreateTable
-CREATE TABLE IF NOT EXISTS "ssndb"."additional_therapy"
+CREATE TABLE IF NOT EXISTS "postgres"."additional_therapy"
 (
     "pid"                     TEXT NOT NULL,
     "addtx_therapy_type"      TEXT,
@@ -28,7 +26,7 @@ CREATE TABLE IF NOT EXISTS "ssndb"."additional_therapy"
     );
 
 -- CreateTable
-CREATE TABLE IF NOT EXISTS "ssndb"."additional_therapy_type"
+CREATE TABLE IF NOT EXISTS "postgres"."additional_therapy_type"
 (
     "additional_therapy_type" TEXT NOT NULL,
 
@@ -36,7 +34,7 @@ CREATE TABLE IF NOT EXISTS "ssndb"."additional_therapy_type"
     );
 
 -- CreateTable
-CREATE TABLE IF NOT EXISTS "ssndb"."additional_tumor"
+CREATE TABLE IF NOT EXISTS "postgres"."additional_tumor"
 (
     "pid"                       TEXT NOT NULL,
     "addtumor_anatomic_side"    TEXT,
@@ -47,7 +45,7 @@ CREATE TABLE IF NOT EXISTS "ssndb"."additional_tumor"
     );
 
 -- CreateTable
-CREATE TABLE IF NOT EXISTS "ssndb"."amputation"
+CREATE TABLE IF NOT EXISTS "postgres"."amputation"
 (
     "pid"             TEXT NOT NULL,
     "sux_date"        DATE NOT NULL,
@@ -57,7 +55,7 @@ CREATE TABLE IF NOT EXISTS "ssndb"."amputation"
     );
 
 -- CreateTable
-CREATE TABLE IF NOT EXISTS "ssndb"."amputation_name"
+CREATE TABLE IF NOT EXISTS "postgres"."amputation_name"
 (
     "group"           TEXT,
     "amputation_name" TEXT NOT NULL,
@@ -66,7 +64,7 @@ CREATE TABLE IF NOT EXISTS "ssndb"."amputation_name"
     );
 
 -- CreateTable
-CREATE TABLE IF NOT EXISTS "ssndb"."anatomic_region"
+CREATE TABLE IF NOT EXISTS "postgres"."anatomic_region"
 (
     "group"                TEXT,
     "region"               TEXT,
@@ -77,7 +75,7 @@ CREATE TABLE IF NOT EXISTS "ssndb"."anatomic_region"
     );
 
 -- CreateTable
-CREATE TABLE IF NOT EXISTS "ssndb"."cancer_syndrome"
+CREATE TABLE IF NOT EXISTS "postgres"."cancer_syndrome"
 (
     "pid"                  TEXT NOT NULL,
     "cancer_syndrome_name" TEXT NOT NULL,
@@ -88,7 +86,7 @@ CREATE TABLE IF NOT EXISTS "ssndb"."cancer_syndrome"
     );
 
 -- CreateTable
-CREATE TABLE IF NOT EXISTS "ssndb"."diagnosis_who"
+CREATE TABLE IF NOT EXISTS "postgres"."diagnosis_who"
 (
     "group"          TEXT,
     "subgroup"       TEXT,
@@ -98,7 +96,7 @@ CREATE TABLE IF NOT EXISTS "ssndb"."diagnosis_who"
     );
 
 -- CreateTable
-CREATE TABLE IF NOT EXISTS "ssndb"."drug"
+CREATE TABLE IF NOT EXISTS "postgres"."drug"
 (
     "drug_group" TEXT,
     "drug_name"  TEXT NOT NULL,
@@ -108,7 +106,7 @@ CREATE TABLE IF NOT EXISTS "ssndb"."drug"
     );
 
 -- CreateTable
-CREATE TABLE IF NOT EXISTS "ssndb"."hemipelvectomy"
+CREATE TABLE IF NOT EXISTS "postgres"."hemipelvectomy"
 (
     "pid"                 TEXT NOT NULL,
     "sux_date"            DATE NOT NULL,
@@ -118,7 +116,7 @@ CREATE TABLE IF NOT EXISTS "ssndb"."hemipelvectomy"
     );
 
 -- CreateTable
-CREATE TABLE IF NOT EXISTS "ssndb"."hemipelvectomy_name"
+CREATE TABLE IF NOT EXISTS "postgres"."hemipelvectomy_name"
 (
     "group"               TEXT,
     "hemipelvectomy_name" TEXT NOT NULL,
@@ -127,7 +125,7 @@ CREATE TABLE IF NOT EXISTS "ssndb"."hemipelvectomy_name"
     );
 
 -- CreateTable
-CREATE TABLE IF NOT EXISTS "ssndb"."hyperthermia"
+CREATE TABLE IF NOT EXISTS "postgres"."hyperthermia"
 (
     "ht_id"               TEXT,
     "pid"                 TEXT NOT NULL,
@@ -144,7 +142,7 @@ CREATE TABLE IF NOT EXISTS "ssndb"."hyperthermia"
     );
 
 -- CreateTable
-CREATE TABLE IF NOT EXISTS "ssndb"."institution"
+CREATE TABLE IF NOT EXISTS "postgres"."institution"
 (
     "institution_name" TEXT NOT NULL,
 
@@ -152,7 +150,7 @@ CREATE TABLE IF NOT EXISTS "ssndb"."institution"
     );
 
 -- CreateTable
-CREATE TABLE IF NOT EXISTS "ssndb"."insurance"
+CREATE TABLE IF NOT EXISTS "postgres"."insurance"
 (
     "insurance_name" TEXT NOT NULL,
 
@@ -160,7 +158,7 @@ CREATE TABLE IF NOT EXISTS "ssndb"."insurance"
     );
 
 -- CreateTable
-CREATE TABLE IF NOT EXISTS "ssndb"."metastasis"
+CREATE TABLE IF NOT EXISTS "postgres"."metastasis"
 (
     "pid"          TEXT NOT NULL,
     "rad_date"     DATE NOT NULL,
@@ -172,7 +170,7 @@ CREATE TABLE IF NOT EXISTS "ssndb"."metastasis"
     );
 
 -- CreateTable
-CREATE TABLE IF NOT EXISTS "ssndb"."other_diagnosis"
+CREATE TABLE IF NOT EXISTS "postgres"."other_diagnosis"
 (
     "pid"                  TEXT NOT NULL,
     "other_diagnosis_name" TEXT NOT NULL,
@@ -182,7 +180,7 @@ CREATE TABLE IF NOT EXISTS "ssndb"."other_diagnosis"
     );
 
 -- CreateTable
-CREATE TABLE IF NOT EXISTS "ssndb"."pathology"
+CREATE TABLE IF NOT EXISTS "postgres"."pathology"
 (
     "pid"                       TEXT NOT NULL,
     "pat_type"                  TEXT NOT NULL,
@@ -218,7 +216,7 @@ CREATE TABLE IF NOT EXISTS "ssndb"."pathology"
     );
 
 -- CreateTable
-CREATE TABLE IF NOT EXISTS "ssndb"."personal_clinical"
+CREATE TABLE IF NOT EXISTS "postgres"."personal_clinical"
 (
     "pid"                TEXT NOT NULL,
     "institution"        TEXT,
@@ -254,7 +252,7 @@ CREATE TABLE IF NOT EXISTS "ssndb"."personal_clinical"
     );
 
 -- CreateTable
-CREATE TABLE IF NOT EXISTS "ssndb"."radiology"
+CREATE TABLE IF NOT EXISTS "postgres"."radiology"
 (
     "pid"                 TEXT NOT NULL,
     "rad_date"            DATE NOT NULL,
@@ -280,7 +278,7 @@ CREATE TABLE IF NOT EXISTS "ssndb"."radiology"
     );
 
 -- CreateTable
-CREATE TABLE IF NOT EXISTS "ssndb"."radiotherapy"
+CREATE TABLE IF NOT EXISTS "postgres"."radiotherapy"
 (
     "pid"                   TEXT NOT NULL,
     "rt_id"                 TEXT,
@@ -305,7 +303,7 @@ CREATE TABLE IF NOT EXISTS "ssndb"."radiotherapy"
     );
 
 -- CreateTable
-CREATE TABLE IF NOT EXISTS "ssndb"."reconstruction"
+CREATE TABLE IF NOT EXISTS "postgres"."reconstruction"
 (
     "pid"                 TEXT NOT NULL,
     "sux_date"            DATE NOT NULL,
@@ -315,7 +313,7 @@ CREATE TABLE IF NOT EXISTS "ssndb"."reconstruction"
     );
 
 -- CreateTable
-CREATE TABLE IF NOT EXISTS "ssndb"."reconstruction_name"
+CREATE TABLE IF NOT EXISTS "postgres"."reconstruction_name"
 (
     "group"               TEXT,
     "sub"                 TEXT,
@@ -325,7 +323,7 @@ CREATE TABLE IF NOT EXISTS "ssndb"."reconstruction_name"
     );
 
 -- CreateTable
-CREATE TABLE IF NOT EXISTS "ssndb"."resection"
+CREATE TABLE IF NOT EXISTS "postgres"."resection"
 (
     "pid"            TEXT NOT NULL,
     "sux_date"       DATE NOT NULL,
@@ -335,7 +333,7 @@ CREATE TABLE IF NOT EXISTS "ssndb"."resection"
     );
 
 -- CreateTable
-CREATE TABLE IF NOT EXISTS "ssndb"."resection_name"
+CREATE TABLE IF NOT EXISTS "postgres"."resection_name"
 (
     "group"          TEXT,
     "sub"            TEXT,
@@ -345,7 +343,7 @@ CREATE TABLE IF NOT EXISTS "ssndb"."resection_name"
     );
 
 -- CreateTable
-CREATE TABLE IF NOT EXISTS "ssndb"."sarcoma_board"
+CREATE TABLE IF NOT EXISTS "postgres"."sarcoma_board"
 (
     "pid"                          TEXT NOT NULL,
     "sb_question"                  TEXT,
@@ -387,7 +385,7 @@ CREATE TABLE IF NOT EXISTS "ssndb"."sarcoma_board"
     );
 
 -- CreateTable
-CREATE TABLE IF NOT EXISTS "ssndb"."sarcoma_board_admin"
+CREATE TABLE IF NOT EXISTS "postgres"."sarcoma_board_admin"
 (
     "sarcoma_board_admin_id"  INTEGER NOT NULL,
     "sb_date"                 DATE,
@@ -398,7 +396,7 @@ CREATE TABLE IF NOT EXISTS "ssndb"."sarcoma_board_admin"
     );
 
 -- CreateTable
-CREATE TABLE IF NOT EXISTS "ssndb"."sarcoma_board_date"
+CREATE TABLE IF NOT EXISTS "postgres"."sarcoma_board_date"
 (
     "sb_date" DATE NOT NULL,
 
@@ -406,7 +404,7 @@ CREATE TABLE IF NOT EXISTS "ssndb"."sarcoma_board_date"
     );
 
 -- CreateTable
-CREATE TABLE IF NOT EXISTS "ssndb"."surgery"
+CREATE TABLE IF NOT EXISTS "postgres"."surgery"
 (
     "pid"                    TEXT NOT NULL,
     "sux_date"               DATE NOT NULL,
@@ -422,7 +420,7 @@ CREATE TABLE IF NOT EXISTS "ssndb"."surgery"
     );
 
 -- CreateTable
-CREATE TABLE IF NOT EXISTS "ssndb"."surgery_disciplines"
+CREATE TABLE IF NOT EXISTS "postgres"."surgery_disciplines"
 (
     "pid"        TEXT NOT NULL,
     "sux_date"   DATE NOT NULL,
@@ -432,7 +430,7 @@ CREATE TABLE IF NOT EXISTS "ssndb"."surgery_disciplines"
     );
 
 -- CreateTable
-CREATE TABLE IF NOT EXISTS "ssndb"."systemic_drug"
+CREATE TABLE IF NOT EXISTS "postgres"."systemic_drug"
 (
     "systemic_therapy_id" TEXT NOT NULL,
     "drug"                TEXT NOT NULL,
@@ -447,7 +445,7 @@ CREATE TABLE IF NOT EXISTS "ssndb"."systemic_drug"
     );
 
 -- CreateTable
-CREATE TABLE IF NOT EXISTS "ssndb"."systemic_therapy"
+CREATE TABLE IF NOT EXISTS "postgres"."systemic_therapy"
 (
     "pid"                         TEXT NOT NULL,
     "systemic_therapy_id"         TEXT NOT NULL,
@@ -469,7 +467,7 @@ CREATE TABLE IF NOT EXISTS "ssndb"."systemic_therapy"
     );
 
 -- CreateTable
-CREATE TABLE IF NOT EXISTS "ssndb"."toxicity"
+CREATE TABLE IF NOT EXISTS "postgres"."toxicity"
 (
     "systemic_therapy_id" TEXT NOT NULL,
     "toxicity_name"       TEXT NOT NULL,
@@ -481,7 +479,7 @@ CREATE TABLE IF NOT EXISTS "ssndb"."toxicity"
     );
 
 -- CreateTable
-CREATE TABLE IF NOT EXISTS "ssndb"."toxicity_name"
+CREATE TABLE IF NOT EXISTS "postgres"."toxicity_name"
 (
     "toxicity_name" TEXT NOT NULL,
     "toxicity_type" TEXT,
@@ -491,7 +489,7 @@ CREATE TABLE IF NOT EXISTS "ssndb"."toxicity_name"
     );
 
 -- CreateTable
-CREATE TABLE IF NOT EXISTS "ssndb"."user"
+CREATE TABLE IF NOT EXISTS "postgres"."user"
 (
     "user_id"        INTEGER NOT NULL,
     "last_name"      TEXT,
@@ -507,92 +505,92 @@ CREATE TABLE IF NOT EXISTS "ssndb"."user"
     );
 
 -- CreateIndex
-CREATE INDEX IF NOT EXISTS "additional_therapy__addtx_therapy_type" ON "ssndb"."additional_therapy" ("addtx_therapy_type");
+CREATE INDEX IF NOT EXISTS "additional_therapy__addtx_therapy_type" ON "postgres"."additional_therapy" ("addtx_therapy_type");
 
 -- CreateIndex
-CREATE INDEX IF NOT EXISTS "additional_tumor__addtumor_anatomic_region" ON "ssndb"."additional_tumor" ("addtumor_anatomic_region");
+CREATE INDEX IF NOT EXISTS "additional_tumor__addtumor_anatomic_region" ON "postgres"."additional_tumor" ("addtumor_anatomic_region");
 
 -- CreateIndex
-CREATE INDEX IF NOT EXISTS "amputation__amputation_name" ON "ssndb"."amputation" ("amputation_name");
+CREATE INDEX IF NOT EXISTS "amputation__amputation_name" ON "postgres"."amputation" ("amputation_name");
 
 -- CreateIndex
-CREATE INDEX IF NOT EXISTS "hemipelvectomy__hemipelvectomy_name" ON "ssndb"."hemipelvectomy" ("hemipelvectomy_name");
+CREATE INDEX IF NOT EXISTS "hemipelvectomy__hemipelvectomy_name" ON "postgres"."hemipelvectomy" ("hemipelvectomy_name");
 
 -- CreateIndex
-CREATE INDEX IF NOT EXISTS "pathology__diagnosis_name" ON "ssndb"."pathology" ("diagnosis_name");
+CREATE INDEX IF NOT EXISTS "pathology__diagnosis_name" ON "postgres"."pathology" ("diagnosis_name");
 
 -- CreateIndex
-CREATE INDEX IF NOT EXISTS "personal_clinical__anatomic_region" ON "ssndb"."personal_clinical" ("anatomic_region");
+CREATE INDEX IF NOT EXISTS "personal_clinical__anatomic_region" ON "postgres"."personal_clinical" ("anatomic_region");
 
 -- CreateIndex
-CREATE INDEX IF NOT EXISTS "reconstruction__reconstruction_name" ON "ssndb"."reconstruction" ("reconstruction_name");
+CREATE INDEX IF NOT EXISTS "reconstruction__reconstruction_name" ON "postgres"."reconstruction" ("reconstruction_name");
 
 -- CreateIndex
-CREATE INDEX IF NOT EXISTS "resection__resection_name" ON "ssndb"."resection" ("resection_name");
+CREATE INDEX IF NOT EXISTS "resection__resection_name" ON "postgres"."resection" ("resection_name");
 
 -- CreateIndex
-CREATE INDEX IF NOT EXISTS "sarcoma_board__sb_date" ON "ssndb"."sarcoma_board" ("sb_date");
+CREATE INDEX IF NOT EXISTS "sarcoma_board__sb_date" ON "postgres"."sarcoma_board" ("sb_date");
 
 -- CreateIndex
-CREATE INDEX IF NOT EXISTS "sarcoma_board_admin__sb_date" ON "ssndb"."sarcoma_board_admin" ("sb_date");
+CREATE INDEX IF NOT EXISTS "sarcoma_board_admin__sb_date" ON "postgres"."sarcoma_board_admin" ("sb_date");
 
 -- CreateIndex
-CREATE INDEX IF NOT EXISTS "surgery__sux_anatomic_region" ON "ssndb"."surgery" ("sux_anatomic_region");
+CREATE INDEX IF NOT EXISTS "surgery__sux_anatomic_region" ON "postgres"."surgery" ("sux_anatomic_region");
 
 -- Drop and add constraints for "additional_therapy"
-ALTER TABLE "ssndb"."additional_therapy" DROP CONSTRAINT IF EXISTS "additional_therapy_addtx_therapy_type_fkey";
-ALTER TABLE "ssndb"."additional_therapy"
-    ADD CONSTRAINT "additional_therapy_addtx_therapy_type_fkey" FOREIGN KEY ("addtx_therapy_type") REFERENCES "ssndb"."additional_therapy_type" ("additional_therapy_type") ON DELETE NO ACTION ON UPDATE NO ACTION;
+ALTER TABLE "postgres"."additional_therapy" DROP CONSTRAINT IF EXISTS "additional_therapy_addtx_therapy_type_fkey";
+ALTER TABLE "postgres"."additional_therapy"
+    ADD CONSTRAINT "additional_therapy_addtx_therapy_type_fkey" FOREIGN KEY ("addtx_therapy_type") REFERENCES "postgres"."additional_therapy_type" ("additional_therapy_type") ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 -- Drop and add constraints for "additional_tumor"
-ALTER TABLE "ssndb"."additional_tumor" DROP CONSTRAINT IF EXISTS "additional_tumor_addtumor_anatomic_region_fkey";
-ALTER TABLE "ssndb"."additional_tumor"
-    ADD CONSTRAINT "additional_tumor_addtumor_anatomic_region_fkey" FOREIGN KEY ("addtumor_anatomic_region") REFERENCES "ssndb"."anatomic_region" ("anatomic_region_name") ON DELETE NO ACTION ON UPDATE NO ACTION;
+ALTER TABLE "postgres"."additional_tumor" DROP CONSTRAINT IF EXISTS "additional_tumor_addtumor_anatomic_region_fkey";
+ALTER TABLE "postgres"."additional_tumor"
+    ADD CONSTRAINT "additional_tumor_addtumor_anatomic_region_fkey" FOREIGN KEY ("addtumor_anatomic_region") REFERENCES "postgres"."anatomic_region" ("anatomic_region_name") ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 -- Drop and add constraints for "amputation"
-ALTER TABLE "ssndb"."amputation" DROP CONSTRAINT IF EXISTS "amputation_amputation_name_fkey";
-ALTER TABLE "ssndb"."amputation"
-    ADD CONSTRAINT "amputation_amputation_name_fkey" FOREIGN KEY ("amputation_name") REFERENCES "ssndb"."amputation_name" ("amputation_name") ON DELETE NO ACTION ON UPDATE NO ACTION;
+ALTER TABLE "postgres"."amputation" DROP CONSTRAINT IF EXISTS "amputation_amputation_name_fkey";
+ALTER TABLE "postgres"."amputation"
+    ADD CONSTRAINT "amputation_amputation_name_fkey" FOREIGN KEY ("amputation_name") REFERENCES "postgres"."amputation_name" ("amputation_name") ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 -- Drop and add constraints for "hemipelvectomy"
-ALTER TABLE "ssndb"."hemipelvectomy" DROP CONSTRAINT IF EXISTS "hemipelvectomy_hemipelvectomy_name_fkey";
-ALTER TABLE "ssndb"."hemipelvectomy"
-    ADD CONSTRAINT "hemipelvectomy_hemipelvectomy_name_fkey" FOREIGN KEY ("hemipelvectomy_name") REFERENCES "ssndb"."hemipelvectomy_name" ("hemipelvectomy_name") ON DELETE NO ACTION ON UPDATE NO ACTION;
+ALTER TABLE "postgres"."hemipelvectomy" DROP CONSTRAINT IF EXISTS "hemipelvectomy_hemipelvectomy_name_fkey";
+ALTER TABLE "postgres"."hemipelvectomy"
+    ADD CONSTRAINT "hemipelvectomy_hemipelvectomy_name_fkey" FOREIGN KEY ("hemipelvectomy_name") REFERENCES "postgres"."hemipelvectomy_name" ("hemipelvectomy_name") ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 -- Drop and add constraints for "pathology"
-ALTER TABLE "ssndb"."pathology" DROP CONSTRAINT IF EXISTS "pathology_diagnosis_name_fkey";
-ALTER TABLE "ssndb"."pathology"
-    ADD CONSTRAINT "pathology_diagnosis_name_fkey" FOREIGN KEY ("diagnosis_name") REFERENCES "ssndb"."diagnosis_who" ("diagnosis_name") ON DELETE NO ACTION ON UPDATE NO ACTION;
+ALTER TABLE "postgres"."pathology" DROP CONSTRAINT IF EXISTS "pathology_diagnosis_name_fkey";
+ALTER TABLE "postgres"."pathology"
+    ADD CONSTRAINT "pathology_diagnosis_name_fkey" FOREIGN KEY ("diagnosis_name") REFERENCES "postgres"."diagnosis_who" ("diagnosis_name") ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 -- Drop and add constraints for "personal_clinical"
-ALTER TABLE "ssndb"."personal_clinical" DROP CONSTRAINT IF EXISTS "personal_clinical_anatomic_region_fkey";
-ALTER TABLE "ssndb"."personal_clinical"
-    ADD CONSTRAINT "personal_clinical_anatomic_region_fkey" FOREIGN KEY ("anatomic_region") REFERENCES "ssndb"."anatomic_region" ("anatomic_region_name") ON DELETE NO ACTION ON UPDATE NO ACTION;
+ALTER TABLE "postgres"."personal_clinical" DROP CONSTRAINT IF EXISTS "personal_clinical_anatomic_region_fkey";
+ALTER TABLE "postgres"."personal_clinical"
+    ADD CONSTRAINT "personal_clinical_anatomic_region_fkey" FOREIGN KEY ("anatomic_region") REFERENCES "postgres"."anatomic_region" ("anatomic_region_name") ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 -- Drop and add constraints for "reconstruction"
-ALTER TABLE "ssndb"."reconstruction" DROP CONSTRAINT IF EXISTS "reconstruction_reconstruction_name_fkey";
-ALTER TABLE "ssndb"."reconstruction"
-    ADD CONSTRAINT "reconstruction_reconstruction_name_fkey" FOREIGN KEY ("reconstruction_name") REFERENCES "ssndb"."reconstruction_name" ("reconstruction_name") ON DELETE NO ACTION ON UPDATE NO ACTION;
+ALTER TABLE "postgres"."reconstruction" DROP CONSTRAINT IF EXISTS "reconstruction_reconstruction_name_fkey";
+ALTER TABLE "postgres"."reconstruction"
+    ADD CONSTRAINT "reconstruction_reconstruction_name_fkey" FOREIGN KEY ("reconstruction_name") REFERENCES "postgres"."reconstruction_name" ("reconstruction_name") ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 -- Drop and add constraints for "resection"
-ALTER TABLE "ssndb"."resection" DROP CONSTRAINT IF EXISTS "resection_resection_name_fkey";
-ALTER TABLE "ssndb"."resection"
-    ADD CONSTRAINT "resection_resection_name_fkey" FOREIGN KEY ("resection_name") REFERENCES "ssndb"."resection_name" ("resection_name") ON DELETE NO ACTION ON UPDATE NO ACTION;
+ALTER TABLE "postgres"."resection" DROP CONSTRAINT IF EXISTS "resection_resection_name_fkey";
+ALTER TABLE "postgres"."resection"
+    ADD CONSTRAINT "resection_resection_name_fkey" FOREIGN KEY ("resection_name") REFERENCES "postgres"."resection_name" ("resection_name") ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 -- Drop and add constraints for "sarcoma_board"
-ALTER TABLE "ssndb"."sarcoma_board" DROP CONSTRAINT IF EXISTS "sarcoma_board_sb_date_fkey";
-ALTER TABLE "ssndb"."sarcoma_board"
-    ADD CONSTRAINT "sarcoma_board_sb_date_fkey" FOREIGN KEY ("sb_date") REFERENCES "ssndb"."sarcoma_board_date" ("sb_date") ON DELETE NO ACTION ON UPDATE NO ACTION;
+ALTER TABLE "postgres"."sarcoma_board" DROP CONSTRAINT IF EXISTS "sarcoma_board_sb_date_fkey";
+ALTER TABLE "postgres"."sarcoma_board"
+    ADD CONSTRAINT "sarcoma_board_sb_date_fkey" FOREIGN KEY ("sb_date") REFERENCES "postgres"."sarcoma_board_date" ("sb_date") ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 -- Drop and add constraints for "sarcoma_board_admin"
-ALTER TABLE "ssndb"."sarcoma_board_admin" DROP CONSTRAINT IF EXISTS "sarcoma_board_admin_sb_date_fkey";
-ALTER TABLE "ssndb"."sarcoma_board_admin"
-    ADD CONSTRAINT "sarcoma_board_admin_sb_date_fkey" FOREIGN KEY ("sb_date") REFERENCES "ssndb"."sarcoma_board_date" ("sb_date") ON DELETE NO ACTION ON UPDATE NO ACTION;
+ALTER TABLE "postgres"."sarcoma_board_admin" DROP CONSTRAINT IF EXISTS "sarcoma_board_admin_sb_date_fkey";
+ALTER TABLE "postgres"."sarcoma_board_admin"
+    ADD CONSTRAINT "sarcoma_board_admin_sb_date_fkey" FOREIGN KEY ("sb_date") REFERENCES "postgres"."sarcoma_board_date" ("sb_date") ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 -- Drop and add constraints for "surgery"
-ALTER TABLE "ssndb"."surgery" DROP CONSTRAINT IF EXISTS "surgery_sux_anatomic_region_fkey";
-ALTER TABLE "ssndb"."surgery"
-    ADD CONSTRAINT "surgery_sux_anatomic_region_fkey" FOREIGN KEY ("sux_anatomic_region") REFERENCES "ssndb"."anatomic_region" ("anatomic_region_name") ON DELETE NO ACTION ON UPDATE NO ACTION;
+ALTER TABLE "postgres"."surgery" DROP CONSTRAINT IF EXISTS "surgery_sux_anatomic_region_fkey";
+ALTER TABLE "postgres"."surgery"
+    ADD CONSTRAINT "surgery_sux_anatomic_region_fkey" FOREIGN KEY ("sux_anatomic_region") REFERENCES "postgres"."anatomic_region" ("anatomic_region_name") ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 
 -- ---------------------------------------------------------------------------------------------
@@ -601,7 +599,7 @@ ALTER TABLE "ssndb"."surgery"
 -- Sample SQL data inserts for the given Prisma schema
 
 -- Additional Therapy Type
-INSERT INTO "ssndb"."additional_therapy_type" ("additional_therapy_type")
+INSERT INTO "postgres"."additional_therapy_type" ("additional_therapy_type")
 VALUES ('Chemotherapy'),
        ('Radiation'),
        ('Surgery'),
@@ -609,7 +607,7 @@ VALUES ('Chemotherapy'),
        ('Targeted Therapy');
 
 -- Additional Therapy
-INSERT INTO "ssndb"."additional_therapy" ("pid", "addtx_therapy_type", "addtx_start", "addtx_end", "addtx_hyperthermia_type",
+INSERT INTO "postgres"."additional_therapy" ("pid", "addtx_therapy_type", "addtx_start", "addtx_end", "addtx_hyperthermia_type",
                                           "addtx_sessions", "addtx_duration", "addtx_comment")
 VALUES ('P001', 'Chemotherapy', '2023-04-01', '2023-04-21', NULL, 6, 120, 'Initial therapy started.'),
        ('P002', 'Radiation', '2023-04-02', '2023-04-22', NULL, 6, 30, 'Follow-up after first session.'),
@@ -618,7 +616,7 @@ VALUES ('P001', 'Chemotherapy', '2023-04-01', '2023-04-21', NULL, 6, 120, 'Initi
        ('P005', 'Targeted Therapy', '2023-04-05', '2023-04-25', NULL, 10, 50,
         'Assessing targeted delivery efficiency.');
 
-INSERT INTO "ssndb"."anatomic_region" ("anatomic_region_name")
+INSERT INTO "postgres"."anatomic_region" ("anatomic_region_name")
 VALUES ('Lung'),
        ('Breast'),
        ('Brain'),
@@ -627,7 +625,7 @@ VALUES ('Lung'),
 
 
 -- Additional Tumor
-INSERT INTO "ssndb"."additional_tumor" ("pid", "addtumor_anatomic_side", "addtumor_anatomic_region", "addtumor_clinical_history")
+INSERT INTO "postgres"."additional_tumor" ("pid", "addtumor_anatomic_side", "addtumor_anatomic_region", "addtumor_clinical_history")
 VALUES ('P001', 'Left', 'Lung', 'History of smoking'),
        ('P002', 'Right', 'Breast', 'No significant family history'),
        ('P003', 'Left', 'Brain', 'Previous treatments failed'),
@@ -635,7 +633,7 @@ VALUES ('P001', 'Left', 'Lung', 'History of smoking'),
        ('P005', 'Left', 'Skin', 'Recurring melanoma');
 
 -- Amputation Name
-INSERT INTO "ssndb"."amputation_name" ("amputation_name")
+INSERT INTO "postgres"."amputation_name" ("amputation_name")
 VALUES ('Leg'),
        ('Arm'),
        ('Foot'),
@@ -644,7 +642,7 @@ VALUES ('Leg'),
     ON CONFLICT (amputation_name) DO NOTHING;
 
 -- Amputation
-INSERT INTO "ssndb"."amputation" ("pid", "sux_date", "amputation_name")
+INSERT INTO "postgres"."amputation" ("pid", "sux_date", "amputation_name")
 VALUES ('P001', '2023-04-06', 'Leg'),
        ('P002', '2023-04-07', 'Arm'),
        ('P003', '2023-04-08', 'Foot'),
@@ -653,7 +651,7 @@ VALUES ('P001', '2023-04-06', 'Leg'),
 
 
 -- Anatomic Region
-INSERT INTO "ssndb"."anatomic_region" ("anatomic_region_name", "group", "region", "sub")
+INSERT INTO "postgres"."anatomic_region" ("anatomic_region_name", "group", "region", "sub")
 VALUES ('Head', 'A', 'Upper', 'Cranial'),
        ('Chest', 'B', 'Middle', 'Thoracic'),
        ('Abdomen', 'C', 'Lower', 'Gastrointestinal'),
@@ -661,7 +659,7 @@ VALUES ('Head', 'A', 'Upper', 'Cranial'),
        ('Arm', 'E', 'Upper', 'Limb');
 
 -- Cancer Syndrome
-INSERT INTO "ssndb"."cancer_syndrome" ("pid", "cancer_syndrome_name", "value", "default")
+INSERT INTO "postgres"."cancer_syndrome" ("pid", "cancer_syndrome_name", "value", "default")
 VALUES ('P001', 'Li-Fraumeni', 'Positive', TRUE),
        ('P002', 'BRCA', 'Negative', FALSE),
        ('P003', 'Hereditary Nonpolyposis', 'Positive', TRUE),
@@ -669,7 +667,7 @@ VALUES ('P001', 'Li-Fraumeni', 'Positive', TRUE),
        ('P005', 'Peutz-Jeghers', 'Positive', TRUE);
 
 -- Diagnosis WHO
-INSERT INTO "ssndb"."diagnosis_who" ("group", "subgroup", "diagnosis_name")
+INSERT INTO "postgres"."diagnosis_who" ("group", "subgroup", "diagnosis_name")
 VALUES ('Oncology', 'Cancer', 'Breast Cancer'),
        ('Oncology', 'Cancer', 'Lung Cancer'),
        ('Oncology', 'Cancer', 'Prostate Cancer'),
@@ -677,7 +675,7 @@ VALUES ('Oncology', 'Cancer', 'Breast Cancer'),
        ('Oncology', 'Cancer', 'Melanoma');
 
 -- Drug
-INSERT INTO "ssndb"."drug" ("drug_group", "drug_name", "default")
+INSERT INTO "postgres"."drug" ("drug_group", "drug_name", "default")
 VALUES ('Chemotherapy', 'Doxorubicin', FALSE),
        ('Immunotherapy', 'Pembrolizumab', TRUE),
        ('Targeted Therapy', 'Trastuzumab', FALSE),
@@ -685,7 +683,7 @@ VALUES ('Chemotherapy', 'Doxorubicin', FALSE),
        ('Chemotherapy', 'Cisplatin', FALSE);
 
 -- Hemipelvectomy Name
-INSERT INTO "ssndb"."hemipelvectomy_name" ("hemipelvectomy_name")
+INSERT INTO "postgres"."hemipelvectomy_name" ("hemipelvectomy_name")
 VALUES ('Partial'),
        ('Total'),
        ('Extended'),
@@ -693,7 +691,7 @@ VALUES ('Partial'),
        ('Subtotal');
 
 -- Hemipelvectomy
-INSERT INTO "ssndb"."hemipelvectomy" ("pid", "sux_date", "hemipelvectomy_name")
+INSERT INTO "postgres"."hemipelvectomy" ("pid", "sux_date", "hemipelvectomy_name")
 VALUES ('P001', '2023-04-11', 'Partial'),
        ('P002', '2023-04-12', 'Total'),
        ('P003', '2023-04-13', 'Extended'),
@@ -701,7 +699,7 @@ VALUES ('P001', '2023-04-11', 'Partial'),
        ('P005', '2023-04-15', 'Subtotal');
 
 -- Hyperthermia
-INSERT INTO "ssndb"."hyperthermia" ("ht_id", "pid", "ht_combination", "ht_type", "ht_indication", "ht_start", "ht_end",
+INSERT INTO "postgres"."hyperthermia" ("ht_id", "pid", "ht_combination", "ht_type", "ht_indication", "ht_start", "ht_end",
                                     "ht_sessions", "ht_schedule", "ht_board_indication")
 VALUES ('HT001', 'P001', 'Comb1', 'Local', 'Cancer treatment', '2023-04-16', '2023-05-16', 5, 'Weekly',
         'Board approved'),
@@ -714,7 +712,7 @@ VALUES ('HT001', 'P001', 'Comb1', 'Local', 'Cancer treatment', '2023-04-16', '20
         'Board approved');
 
 -- Institution
-INSERT INTO "ssndb"."institution" ("institution_name")
+INSERT INTO "postgres"."institution" ("institution_name")
 VALUES ('City Hospital'),
        ('Regional Medical Center'),
        ('University Clinic'),
